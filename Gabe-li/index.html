@@ -12,6 +12,29 @@
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/main.css">
         <script src="js/vendor/modernizr-2.8.0.min.js"></script>
+
+        <script>
+            function savetext () {
+                var s = document.getElementById ("idTextarea").value;
+                if (s != localStorage.savedtext) {
+                    localStorage.savedtext = s;
+                    }
+                document.getElementById ("idCharCount").innerHTML = s.length;
+                }
+            function startup () {
+                if (typeof (Storage) == undefined) {
+                    document.getElementById ("idCaveat").innerHTML = ", which unfortunately is not available in this browser, please get chrome :) you'll be happier, trust us";
+                    }
+                else {
+                    if (localStorage.savedtext == undefined) {
+                        localStorage.savedtext = "";
+                        }
+                    document.getElementById ("idTextarea").value = localStorage.savedtext;
+                    self.setInterval (function () {savetext ()}, 1000); //call every second
+                    }
+                }
+            </script>
+
     </head>
     <body>
         <!--[if lt IE 8]>
@@ -136,6 +159,14 @@
                     </footer>
                 </blockquote>
             </section>
+            <section>
+                 <h1>Tell Us What You Think Of Us</h1>
+                    <p>Drop us a line in the text field and it'll stay there for us to read later.<span id="idCaveat"></span>.</p>
+                    <textarea id="idTextarea"></textarea>
+                    <p>Go ahead and type. Don't worry about closing this tab or closing your browser, your message still be here ;)</p>
+                    <span id="idCharCount"></span>
+
+            </section>
         </main>
 
         <footer role="contentinfo">
@@ -158,5 +189,16 @@
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.1.min.js"><\/script>')</script>
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
+
+        <script>
+            startup ();
+            </script>
+        <script language="JavaScript" type="text/javascript">
+    var imageUrl = "http://counters.scripting.com/counters/count.gif";
+    var imageTag = "<img src=\"" + imageUrl + "?group=locastorageDemo&referer=" + escape (document.referrer) + "\" height=\"1\" width=\"1\">";
+    document.write (imageTag);
+    </script>
+
+
     </body>
 </html>
