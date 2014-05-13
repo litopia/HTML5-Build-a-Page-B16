@@ -4,7 +4,10 @@ For this assignment, students will be required to create a small, single page We
 
 ## Information about this project
 
-Created by Gabe Pelegrin and Lili
+Created by Gabe Pelegrin and Lili.
+
 Page model is based on a Infusion WP Theme Demo (https://dl.dropboxusercontent.com/u/4922522/blazrobar/demo/infusion/index.html).
+
+Local stroge function is created in "Contact Us" section at the bottom of the page.
 
 
