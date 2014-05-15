@@ -1,11 +1,14 @@
 CACHE MANIFEST
+<<<<<<< HEAD
 #2014-5-13 v4.0
 
 CACHE:
 ./favicon.ico
+=======
+>>>>>>> skilowg-master
 ./index.html
-./css/main.css
 ./img/card_top1.png
+<<<<<<< HEAD
 ./js/main.js
 
 NETWORK:
@@ -13,3 +16,5 @@ NETWORK:
 
 
 
+=======
+>>>>>>> skilowg-master
